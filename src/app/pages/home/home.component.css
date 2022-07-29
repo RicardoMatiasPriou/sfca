@@ -1,7 +1,133 @@
 H1{
+
+}
+
+/* .PEPE{
+  font-family: 'Times New Roman', Times, serif;
+  margin: 30px 0 10px 0;
+    font-size: 33px;
+    font-weight: 500;
+    line-height: 56px;
+    text-transform: uppercase;
+    color: #fff;
+} */
+.timenw{
+  font-family: 'Times New Roman', Times, serif !important;
+}
+#hero h1 {
+  margin: 30px 0 10px 0;
+  font-size: 42px;
+  font-weight: 500;
+  line-height: 71px;
+  text-transform: uppercase;
+  color: #fff;
+}
+
+
+/* 158 */
+/* #ffeb81 */
+/* #a0e76c */
+/* #7B7688 */
+/* #services .icon i {
+  color: #f5ea20;
+  font-size: 24px;
+  line-height: 0;
+} */
+#services  .mine{
+  padding: 50px 20px;
+  margin-bottom: 50px;
+  text-align: center;
+  border: 1px solid #e6e6e6;
+  height: 200px;
+  position: relative;
+  background:url(https://res.cloudinary.com/ricardo3874/image/upload/e_gradient_fade:20/v1658979984/Abogados%20sfc/21_h0gclu.jpg;)top center;
+  background-size: cover;
+}
+#services .agua {
+  padding: 50px 20px;
+  margin-bottom: 50px;
+  text-align: center;
+  border: 1px solid #e6e6e6;
+  height: 200px;
+  position: relative;
+  background: url(https://res.cloudinary.com/ricardo3874/image/upload/e_gradient_fade:20/v1658979916/Abogados%20sfc/puna4_tuausl.jpg)top center;
+  background-size: cover;
+}
+#services .hidro {
+  padding: 50px 20px;
+  margin-bottom: 50px;
+  text-align: center;
+  border: 1px solid #e6e6e6;
+  height: 200px;
+  position: relative;
+  background:url(https://res.cloudinary.com/ricardo3874/image/upload/e_gradient_fade:20/v1658980985/depositphotos_112418502-stock-photo-oil-pump-jack_hoswzl.webp)top center ;
+  background-size: cover;
+}
+#services .cor {
+  padding: 50px 20px;
+  margin-bottom: 50px;
+  text-align: center;
+  border: 1px solid #e6e6e6;
+  height: 200px;
+  position: relative;
+  background:url(https://res.cloudinary.com/ricardo3874/image/upload/e_gradient_fade:20/v1658981207/pexels-matthias-zomer-618158_nsn3xu.jpg)top center ;
+  background-size: cover;
+}
+.section-header .section-title {
+  font-size: 32px;
+  color: #111;
+  text-transform: uppercase;
+  text-align: center;
+  font-weight: 700;
+  margin-bottom: 5px;
   font-family: 'Times New Roman', Times, serif;
 }
-.PEPE{
-  font-family: 'Times New Roman', Times, serif;
-  font-size: 100;
+
+
+.collapse1{
+  min-width: 228px
+}
+.collapse2{
+  min-height:163px; min-width: 204px;
+}
+
+@media (min-width: 470px) {
+.collapse1{
+  min-width: 480px
+}
+.collapse2{
+  min-height:304px; min-width: 456px;
+}
+
+
+
+}
+
+
+.btn-outline-secondary {
+  color: #fff;
+  border-color: #474d52;
+  background-color: #474d52;
+  font-family: 'Times New Roman', Times, serif
+}
+.btn-outline-secondary:hover {
+  color: #474d52;
+  background-color: #fff;
+  border-color: #474d52;
+}
+/* .post-item{
+
+  max-width: 227px;
+} */
+.offcanvas-backdrop{
+  display: none;
+}
+.modal-backdrop {
+display: none;
+}
+.modal-backdrop.show{
+  display: none;
+}
+.offcanvas-backdrop.show {
+  display: none !important
 }

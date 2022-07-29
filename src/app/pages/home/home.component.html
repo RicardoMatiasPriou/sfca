@@ -1,136 +1,270 @@
-<header id="header" class="fixed-top d-flex align-items-center header-transparent " (scroll)="onscroll()" [ngClass]="navbarfixed?'header-scrolled':''" >
+<header id="header" class="fixed-top d-flex align-items-center header-transparent" (scroll)="onscroll()"
+  [ngClass]="navbarfixed ? 'header-scrolled' : ''">
   <div class="container d-flex justify-content-between align-items-center">
-
     <div id="logo">
-      <a routerLink="/"><img src="assets/img/logo_.png" width="110px" alt=""></a>
-      <!-- Uncomment below if you prefer to use a text logo -->
-      <!--<h1><a href="index.html">Regna</a></h1>-->
+      <a routerLink="/"><img src="assets/img/logo_.png" width="110px" alt="" /></a>
     </div>
 
     <nav id="navbar" class="navbar">
       <ul>
-        <li><a class="nav-link scrollto " [routerLink]="['/']" routerLinkActive="active" >Inicio</a></li>
-        <li class="dropdown"><a  [routerLink]="['/servicios']" routerLinkActive="active"><span>Servicios</span> <i class="bi bi-chevron-down"></i></a>
+        <li>
+          <a class="nav-link scrollto" [routerLink]="['/']" routerLinkActive="active">Inicio</a>
+        </li>
+        <li class="dropdown">
+          <a [routerLink]="['/servicios']" routerLinkActive="active"><span>Servicios</span> <i
+              class="bi bi-chevron-down"></i></a>
           <ul>
-            <li><a  [routerLink]="['/servicios/:Mineria']" routerLinkActive="active">Mineria</a></li>
-            <!-- <li class="dropdown"><a href="#"><span>Deep Drop Down</span> <i class="bi bi-chevron-right"></i></a>
-              <ul>
-                <li><a href="#">Deep Drop Down 1</a></li>
-                <li><a href="#">Deep Drop Down 2</a></li>
-                <li><a href="#">Deep Drop Down 3</a></li>
-                <li><a href="#">Deep Drop Down 4</a></li>
-                <li><a href="#">Deep Drop Down 5</a></li>
-              </ul>
-            </li> -->
-            <li><a  [routerLink]="['/servicios/:Hidrocarburos']" routerLinkActive="active">Hidrocarburos</a></li>
-            <li><a  [routerLink]="['/servicios/:Medioambiente']" routerLinkActive="active">Medioambiente – Recursos Hídricos</a></li>
-            <li><a  [routerLink]="['/servicios/:Corporativo']" routerLinkActive="active">Corporativo</a></li>
+            <li>
+              <a [routerLink]="['/servicios/:Mineria']" routerLinkActive="active">Mineria</a>
+            </li>
+
+            <li>
+              <a [routerLink]="['/servicios/:Hidrocarburos']" routerLinkActive="active">Hidrocarburos</a>
+            </li>
+            <li>
+              <a [routerLink]="['/servicios/:Medioambiente']" routerLinkActive="active">Medioambiente – Recursos
+                Hídricos</a>
+            </li>
+            <li>
+              <a [routerLink]="['/servicios/:Corporativo']" routerLinkActive="active">Corporativo</a>
+            </li>
           </ul>
         </li>
-        <li class="dropdown"><a [routerLink]="['/equipo']" routerLinkActive="active"><span>Equipo</span> <i class="bi bi-chevron-down"></i></a>
+        <li class="dropdown">
+          <a [routerLink]="['/equipo']" routerLinkActive="active"><span>Equipo</span> <i
+              class="bi bi-chevron-down"></i></a>
           <ul>
             <li><a routerLink="/equipo/Santiago">Santiago Saravia Frias</a></li>
-            <!-- <li class="dropdown"><a href="#"><span>Deep Drop Down</span> <i class="bi bi-chevron-right"></i></a>
-              <ul>
-                <li><a href="#">Deep Drop Down 1</a></li>
-                <li><a href="#">Deep Drop Down 2</a></li>
-                <li><a href="#">Deep Drop Down 3</a></li>
-                <li><a href="#">Deep Drop Down 4</a></li>
-                <li><a href="#">Deep Drop Down 5</a></li>
-              </ul>
-            </li> -->
             <li><a routerLink="/equipo/Agustín">Agustín Saravia Frías</a></li>
             <li><a routerLink="/equipo/Lucas">Lucas Cornejo Fossati</a></li>
             <li><a routerLink="/equipo/Consuelo">Consuelo Saravia Frias</a></li>
             <li><a routerLink="/equipo/Diego">Diego Juncosa Cornejo</a></li>
             <li><a routerLink="/equipo/Sofia">Sofia Paz Figueroa</a></li>
-
           </ul>
         </li>
-        <li><a class="nav-link scrollto" routerLink='/clientes' routerLinkActive="active">Clientes</a></li>
-        <li><a class="nav-link scrollto" routerLink='/novedades' routerLinkActive="active">Novedades</a></li>
-        <li><a class="nav-link scrollto " routerLink='/contactenos' routerLinkActive="active">Contactenos</a></li>
+        <li>
+          <a class="nav-link scrollto" routerLink="/clientes" routerLinkActive="active">Clientes</a>
+        </li>
+        <li>
+          <a class="nav-link scrollto" routerLink="/novedades" routerLinkActive="active">Novedades</a>
+        </li>
+        <li>
+          <a class="nav-link scrollto" routerLink="/contactenos" routerLinkActive="active">Contactenos</a>
+        </li>
       </ul>
-      <i class="bi bi-list mobile-nav-toggle" data-bs-toggle="offcanvas" href="#offcanvasExample" role="button" aria-controls="offcanvasExample" > </i>
-      <div class="offcanvas offcanvas-end bg-black text-white" tabindex="-1" id="offcanvasExample" aria-labelledby="offcanvasExampleLabel">
+      <i class="bi bi-list mobile-nav-toggle" data-bs-toggle="offcanvas" href="#offcanvasExample" role="button"
+        aria-controls="offcanvasExample">
+      </i>
+      <div class="offcanvas offcanvas-end bg-black text-white" tabindex="-1" id="offcanvasExample"
+        aria-labelledby="offcanvasExampleLabel" style="    z-index: 10000000;">
         <div class="offcanvas-header">
           <h5 class="offcanvas-title" id="offcanvasExampleLabel"></h5>
-          <button type="button" class="btn-close text-white" data-bs-dismiss="offcanvas" aria-label="Close" style="filter: invert(1);"></button>
+          <button type="button" class="btn-close text-white" data-bs-dismiss="offcanvas" aria-label="Close"
+            style="filter: invert(1)"></button>
         </div>
         <div class="offcanvas-body">
-          <div class=""  >
-
-          <ul style="display: block;">
-            <li class="py-3"><a class="nav-link scrollto " [routerLink]="['/']" routerLinkActive="active" >Inicio</a></li>
-            <li class="dropdown py-3"><a  [routerLink]="['/servicios']" routerLinkActive="active"><span>Servicios</span> <i class="bi bi-chevron-down"></i></a>
-              <ul>
-                <li><a  [routerLink]="['/servicios/Mineria']" routerLinkActive="active">Mineria</a></li>
-                <!-- <li class="dropdown"><a href="#"><span>Deep Drop Down</span> <i class="bi bi-chevron-right"></i></a>
-                  <ul>
-                    <li><a href="#">Deep Drop Down 1</a></li>
-                    <li><a href="#">Deep Drop Down 2</a></li>
-                    <li><a href="#">Deep Drop Down 3</a></li>
-                    <li><a href="#">Deep Drop Down 4</a></li>
-                    <li><a href="#">Deep Drop Down 5</a></li>
-                  </ul>
-                </li> -->
-                <li><a  [routerLink]="['/servicios/Hidrocarburos']" routerLinkActive="active">Hidrocarburos</a></li>
-                <li><a  [routerLink]="['/servicios/Medioambiente']" routerLinkActive="active">Medioambiente – Recursos Hídricos</a></li>
-                <li><a  [routerLink]="['/servicios/Corporativo']" routerLinkActive="active">Corporativo</a></li>
-              </ul>
-            </li>
-            <li class="dropdown py-3"><a [routerLink]="['/equipo']" routerLinkActive="active"><span>Equipo</span> <i class="bi bi-chevron-down"></i></a>
-              <ul>
-                <li><a routerLink="/equipo/Santiago">Santiago Saravia Frias</a></li>
-                <!-- <li class="dropdown"><a href="#"><span>Deep Drop Down</span> <i class="bi bi-chevron-right"></i></a>
-                  <ul>
-                    <li><a href="#">Deep Drop Down 1</a></li>
-                    <li><a href="#">Deep Drop Down 2</a></li>
-                    <li><a href="#">Deep Drop Down 3</a></li>
-                    <li><a href="#">Deep Drop Down 4</a></li>
-                    <li><a href="#">Deep Drop Down 5</a></li>
-                  </ul>
-                </li> -->
-                <li><a routerLink="/equipo/Agustín">Agustín Saravia Frías</a></li>
-                <li><a routerLink="/equipo/Lucas">Lucas Cornejo Fossati</a></li>
-                <li><a routerLink="/equipo/Consuelo">Consuelo Saravia Frias</a></li>
-                <li><a routerLink="/equipo/Diego">Diego Juncosa Cornejo</a></li>
-                <li><a routerLink="/equipo/Sofia">Sofia Paz Figueroa</a></li>
-
-              </ul>
-            </li>
-            <li class="py-3"><a class="nav-link scrollto" routerLink='/clientes' routerLinkActive="active">Clientes</a></li>
-            <li class="py-3"><a class="nav-link scrollto" routerLink='/novedades' routerLinkActive="active">Novedades</a></li>
-            <li class="py-3"><a class="nav-link scrollto " routerLink='/contactenos' routerLinkActive="active">Contactenos</a></li>
-          </ul>
-        </div>
+          <div class="">
+            <ul style="display: block">
+              <li class="py-3">
+                <a class="nav-link scrollto" [routerLink]="['/']" routerLinkActive="active">Inicio</a>
+              </li>
+              <li class="dropdown py-3">
+                <a href="#" routerLinkActive="active"><span>Servicios</span> <i class="bi bi-chevron-down"></i></a>
+                <ul>
+                  <li>
+                    <a [routerLink]="['/servicios/Mineria']" routerLinkActive="active">Mineria</a>
+                  </li>
+                  <li>
+                    <a [routerLink]="['/servicios/Hidrocarburos']" routerLinkActive="active">Hidrocarburos</a>
+                  </li>
+                  <li>
+                    <a [routerLink]="['/servicios/Medioambiente']" routerLinkActive="active">Medioambiente – Recursos
+                      Hídricos</a>
+                  </li>
+                  <li>
+                    <a [routerLink]="['/servicios/Corporativo']" routerLinkActive="active">Corporativo</a>
+                  </li>
+                </ul>
+              </li>
+              <li class="dropdown py-3">
+                <a routerLinkActive="active"><span>Equipo</span> <i class="bi bi-chevron-down"></i></a>
+                <ul>
+                  <li>
+                    <a routerLink="/equipo/Santiago">Santiago Saravia Frias</a>
+                  </li>
+                  <li>
+                    <a routerLink="/equipo/Agustín">Agustín Saravia Frías</a>
+                  </li>
+                  <li>
+                    <a routerLink="/equipo/Lucas">Lucas Cornejo Fossati</a>
+                  </li>
+                  <li>
+                    <a routerLink="/equipo/Consuelo">Consuelo Saravia Frias</a>
+                  </li>
+                  <li>
+                    <a routerLink="/equipo/Diego">Diego Juncosa Cornejo</a>
+                  </li>
+                  <li><a routerLink="/equipo/Sofia">Sofia Paz Figueroa</a></li>
+                </ul>
+              </li>
+              <li class="py-3">
+                <a class="nav-link scrollto" routerLink="/clientes" routerLinkActive="active">Clientes</a>
+              </li>
+              <li class="py-3">
+                <a class="nav-link scrollto" routerLink="/novedades" routerLinkActive="active">Novedades</a>
+              </li>
+              <li class="py-3">
+                <a class="nav-link scrollto" routerLink="/contactenos" routerLinkActive="active">Contactenos</a>
+              </li>
+            </ul>
+          </div>
         </div>
       </div>
-    </nav><!-- .navbar -->
+    </nav>
+    <!-- .navbar -->
   </div>
-</header><!-- End Header -->
+</header>
+<!-- End Header -->
 
 <!-- ======= Hero Section ======= -->
 <section id="hero">
-  <div class="hero-container container-sm" data-aos="zoom-in" data-aos-delay="100">
+  <div class="hero-container container-sm timenw" style="font-family: 'Times New Roman', Times, serif"
+    data-aos="zoom-in" data-aos-delay="100">
     <h1 class="py-3 PEPE">Saravia Frias & Cornejo</h1>
-    <h2 class="text-white PEPE " style="    color: #eee;
-    margin-bottom: 50px;
-    font-size: 34px;
-    font-weight: 500;">Abogados</h2>
-
-</div>
-</section><!-- End Hero Section -->
+    <h2 class="text-white PEPE" style="
+        color: #eee;
+        margin-bottom: 50px;
+        font-size: 34px;
+        font-weight: 500;
+      ">
+      Abogados
+    </h2>
+  </div>
+</section>
+<!-- End Hero Section -->
 
 <main id="main">
-
   <!-- ======= About Section ======= -->
+
   <section id="about">
+    <div class="container">
+      <div class="row">
+        <div class="col collapse1" style="align-self: center">
+          <div class="section-header">
+            <h3 class="section-title">Sobre nosotros</h3>
+            <p class="section-description" style="
+                color: black;
+                text-transform: uppercase;
+                text-align: center;
+                padding-bottom: 0px;
+                font-size: larger;
+                font-family: -webkit-body;
+                font-weight: 500;
+              ">
+              Somos uno de los principales estudios de abogados de Argentina,
+              con sede en la ciudad de Salta, especializados en recursos
+              naturales. Nuestra misión es brindar un servicio jurídico de
+              excelencia, innovador y personalizado.
+            </p>
+          </div>
+        </div>
+        <div class="col collapse1" style="align-self: center">
+          <img src="https://res.cloudinary.com/ricardo3874/image/upload/v1658979620/Abogados%20sfc/DSC02578_eb6blt.jpg"
+            alt="" srcset="" class="img-fluid" />
+        </div>
+      </div>
+    </div>
+
+    <div class="container">
+      <div class="row">
+        <!-- section title -->
+        <div class="col-12">
+          <div class="title text-center" style="padding-top: 46px">
+            <div class="border"></div>
+            <p class="section-description" style="
+                color: black;
+                text-transform: uppercase;
+                text-align: center;
+                padding-bottom: 0px;
+                font-size: 23px;
+                font-family: -webkit-body;
+                font-weight: 600;
+                padding-top: 20px;
+                margin-top: 44px;
+              ">
+              Articulos redactados por nuestro equipo
+            </p>
+          </div>
+        </div>
+        <!-- /section title -->
+        <!-- single blog post -->
+        <article class="col-md-4 col-sm-6 col-xs-12 clearfix">
+          <div class="post-item">
+            <div class="media-wrapper">
+              <img src="http://sfcabogados.com.ar/wp-content/uploads/2021/06/thenewerport1.jpg"
+                alt="amazing caves coverimage" class="img-fluid" height="305px" />
+            </div>
+
+            <div class="content">
+              <h3>
+                <a>Natural Resources Law Firm of the Year – South America</a>
+              </h3>
+              <p>Revista “The New World Report” | Junio 2021</p>
+              <a class="btn btn-outline-secondary" routerLink="novedades">Leer mas</a>
+            </div>
+          </div>
+        </article>
+        <!-- /single blog post -->
+
+        <!-- single blog post -->
+        <article class="col-md-4 col-sm-6 col-sm-12">
+          <div class="post-item">
+            <div class="media-wrapper">
+              <img src="http://sfcabogados.com.ar/wp-content/uploads/2019/03/auno-e1552668829393.png"
+                alt="amazing caves coverimage" class="img-fluid" height="305px" />
+            </div>
+
+            <div class="content">
+              <h3><a>DESDE EL NORTE</a></h3>
+              <p>A Uno Abogados | Febrero 2019</p>
+              <a class="btn btn-outline-secondary" routerLink="novedades">Leer mas</a>
+            </div>
+          </div>
+        </article>
+        <!-- end single blog post -->
+
+        <!-- single blog post -->
+        <article class="col-md-4 col-sm-6 col-xs-12">
+          <div class="post-item">
+            <div class="media-wrapper">
+              <img src="http://sfcabogados.com.ar/wp-content/uploads/2019/03/Finance.png" alt="amazing caves coverimage"
+                class="img-fluid" height="305px" />
+            </div>
+
+            <div class="content">
+              <h3>
+                <a>
+                  Route One Acquires A Stake In The Argentinian “Altar Project”
+                </a>
+              </h3>
+              <p>FINANCE MONTHLY | Octubre 2018</p>
+              <a class="btn btn-outline-secondary" routerLink="novedades">Leer mas</a>
+            </div>
+          </div>
+        </article>
+        <!-- end single blog post -->
+      </div>
+      <!-- end row -->
+    </div>
+    <!-- end container -->
+  </section>
+
+  <!-- <section id="about">
     <div class="container" data-aos="fade-up">
       <div class="row about-container container" >
 
         <div class="col-lg-6 content order-lg-1 order-2">
-          <h2 class="title">Un poco sobre nosotros</h2>
+          <h2 class="title">Sobre nosotros</h2>
           <p>
             Somos uno de los principales estudios de abogados de Argentina, con sede en la ciudad de Salta, especializados en recursos naturales.
             Nuestra misión es brindar un servicio jurídico de excelencia, innovador y personalizado.
@@ -143,7 +277,12 @@
       </div>
 
     </div>
-  </section><!-- End About Section -->
+  </section> -->
+  <!-- Carousel wrapper -->
+
+  <!-- Carousel wrapper -->
+
+  <!-- End About Section -->
 
   <!-- ======= Facts Section ======= -->
   <!-- <section id="facts">
@@ -184,58 +323,69 @@
     <div class="container" data-aos="fade-up">
       <div class="section-header">
         <h3 class="section-title">Servicios</h3>
-        <p class="section-description">Brindamos asesoramiento jurídico de excelencia y personalizado a empresas mineras, hidrocarburiferas y de recursos hídricos en el cumplimiento de la legislación argentina.</p>
+        <p class="section-description">
+          Brindamos asesoramiento jurídico de excelencia y personalizado a
+          empresas mineras, hidrocarburiferas y de recursos hídricos en el
+          cumplimiento de la legislación argentina.
+        </p>
       </div>
       <div class="row">
-        <div class="col-lg-3 col-md-6" data-aos="zoom-in"  [routerLink]="['/servicios/Mineria']">
-          <div class="box">
-            <div class="icon"><a href=""><i class="bi bi-minecart-loaded"></i></a></div>
-            <h4 class="title"><a href="">Mineria></a></h4>
+        <div class="col-lg-3 col-md-6" data-aos="zoom-in" [routerLink]="['/servicios/Mineria']">
+          <div class="box mine">
+            <div class="icon">
+              <a><i class="bi bi-minecart-loaded"></i></a>
+            </div>
+            <h4 class="title"><a>Mineria</a></h4>
             <p class="description"></p>
           </div>
         </div>
-        <div class="col-lg-3 col-md-6" data-aos="zoom-in"  [routerLink]="['/servicios/Hidrocarburos']">
-          <div class="box">
-            <div class="icon"><a href=""><i class="fa-solid fa-oil-well"></i></a></div>
-            <h4 class="title"><a href="">Hidrocarburos</a></h4>
+        <div class="col-lg-3 col-md-6" data-aos="zoom-in" [routerLink]="['/servicios/Hidrocarburos']">
+          <div class="box hidro">
+            <div class="icon">
+              <a><i class="fa-solid fa-oil-well"></i></a>
+            </div>
+            <h4 class="title"><a>Hidrocarburos</a></h4>
             <p class="description"></p>
           </div>
         </div>
-        <div class="col-lg-3 col-md-6" data-aos="zoom-in"  [routerLink]="['/servicios/Medioambiente']">
-          <div class="box">
-            <div class="icon"><a href=""><i class="fa-solid fa-water"></i></a></div>
-            <h4 class="title"><a href="">Medioambiente – Recursos Hídricos</a></h4>
+        <div class="col-lg-3 col-md-6" data-aos="zoom-in" [routerLink]="['/servicios/Medioambiente']">
+          <div class="box agua">
+            <div class="icon">
+              <a><i class="fa-solid fa-water"></i></a>
+            </div>
+            <h4 class="title"><a>Medioambiente</a></h4>
             <p class="description"></p>
           </div>
         </div>
 
-        <div class="col-lg-3 col-md-6" data-aos="zoom-in"  [routerLink]="['/servicios/Corporativo']">
-          <div class="box">
-            <div class="icon"><a href=""><i class="fa-solid fa-water"></i></a></div>
-            <h4 class="title"><a href="">Corporativo</a></h4>
+        <div class="col-lg-3 col-md-6" data-aos="zoom-in" [routerLink]="['/servicios/Corporativo']">
+          <div class="box cor">
+            <div class="icon">
+              <a><i class="fa-solid fa-water"></i></a>
+            </div>
+            <h4 class="title"><a>Corporativo</a></h4>
             <p class="description"></p>
           </div>
         </div>
       </div>
-
     </div>
-  </section><!-- End Services Section -->
+  </section>
+  <!-- End Services Section -->
 
   <!-- ======= Call To Action Section ======= -->
   <section id="call-to-action">
     <div class="container">
       <div class="row" data-aos="zoom-in">
-        <div class="col-lg-9 text-center text-lg-start">
+        <div class="col-lg-9 text-center text-lg-start" style="text-align-last: center; text-transform: uppercase">
           <h3 class="cta-title">Saravia Frias Cornejo en los Medios</h3>
-          <p class="cta-text"></p>
         </div>
         <div class="col-lg-3 cta-btn-container text-center">
-          <a class="cta-btn align-middle" href="#">Navegar</a>
+          <a class="cta-btn" routerLink="novedades">Novedades</a>
         </div>
       </div>
-
     </div>
-  </section><!-- End Call To Action Section -->
+  </section>
+  <!-- End Call To Action Section -->
 
   <!-- ======= Portfolio Section ======= -->
   <!-- <section id="portfolio" class="portfolio">
@@ -358,96 +508,122 @@
     <div class="container" data-aos="fade-up">
       <div class="section-header">
         <h3 class="section-title">Nuestro Equipo</h3>
-        <p class="section-description">Somos un equipo de abogados con una sólida experiencia en asesoramiento jurídico integral a empresas nacionales e internacionales con un enfoque basado en la confianza y versatilidad. A partir del conocimiento del negocio que desarrollan nuestros clientes proveemos soluciones eficientes y seguras.</p>
+        <p class="section-description">
+          Somos un equipo de abogados con una sólida experiencia en
+          asesoramiento jurídico integral a empresas nacionales e
+          internacionales con un enfoque basado en la confianza y versatilidad.
+          A partir del conocimiento del negocio que desarrollan nuestros
+          clientes proveemos soluciones eficientes y seguras.
+        </p>
       </div>
       <div class="row">
         <div class="col-lg-4 col-md-4" routerLink="/equipo/Agustín">
           <div class="member" data-aos="fade-up" data-aos-delay="100">
-            <div class="pic"><img src="assets/img/Santiago-Saravia-Frias.jpg" alt=""></div>
+            <div class="pic">
+              <img
+                src="https://res.cloudinary.com/ricardo3874/image/upload/v1658979596/Abogados%20sfc/DSC02503_z96c7g.jpg"
+                alt="" />
+            </div>
             <h4>Santiago Saravia Frias</h4>
             <span>Socio de Saravia Frías | Cornejo Abogados</span>
             <div class="social">
-              <a href=""><i class="bi bi-twitter"></i></a>
-              <a href=""><i class="bi bi-facebook"></i></a>
-              <a href=""><i class="bi bi-instagram"></i></a>
-              <a href=""><i class="bi bi-linkedin"></i></a>
+              <a><i class="bi bi-twitter"></i></a>
+              <a><i class="bi bi-facebook"></i></a>
+              <a><i class="bi bi-instagram"></i></a>
+              <a><i class="bi bi-linkedin"></i></a>
             </div>
           </div>
         </div>
 
         <div class="col-lg-4 col-md-4" routerLink="/equipo/Agustín">
           <div class="member" data-aos="fade-up" data-aos-delay="200">
-            <div class="pic"><img src="assets/img/Agustin-Saravias-Frias.jpg" alt=""></div>
+            <div class="pic">
+              <img
+                src="https://res.cloudinary.com/ricardo3874/image/upload/v1658979594/Abogados%20sfc/DSC02495_kolf0l.jpg"
+                alt="" />
+            </div>
             <h4>Agustín Saravia Frías</h4>
             <span>Socio de Saravia Frías | Cornejo Abogados</span>
             <div class="social">
-              <a href=""><i class="bi bi-twitter"></i></a>
-              <a href=""><i class="bi bi-facebook"></i></a>
-              <a href=""><i class="bi bi-instagram"></i></a>
-              <a href=""><i class="bi bi-linkedin"></i></a>
+              <a><i class="bi bi-twitter"></i></a>
+              <a><i class="bi bi-facebook"></i></a>
+              <a><i class="bi bi-instagram"></i></a>
+              <a><i class="bi bi-linkedin"></i></a>
             </div>
           </div>
         </div>
 
-        <div class="col-lg-4 col-md-4" routerLink="/equipo/Lucas">
+        <!-- <div class="col-lg-4 col-md-4" routerLink="/equipo/Lucas">
           <div class="member" data-aos="fade-up" data-aos-delay="300">
-            <div class="pic"><img src="assets/img/LUCAS-CORNEJO-FOSSATI.jpg" alt=""></div>
+            <div class="pic">
+              <img src="assets/img/LUCAS-CORNEJO-FOSSATI.jpg" alt="" />
+            </div>
             <h4>Lucas Cornejo Fossati</h4>
             <span>Socio de Saravia Frías | Cornejo Abogados</span>
             <div class="social">
-              <a href=""><i class="bi bi-twitter"></i></a>
-              <a href=""><i class="bi bi-facebook"></i></a>
-              <a href=""><i class="bi bi-instagram"></i></a>
-              <a href=""><i class="bi bi-linkedin"></i></a>
+              <a><i class="bi bi-twitter"></i></a>
+              <a><i class="bi bi-facebook"></i></a>
+              <a><i class="bi bi-instagram"></i></a>
+              <a><i class="bi bi-linkedin"></i></a>
             </div>
           </div>
-        </div>
+        </div> -->
 
         <div class="col-lg-4 col-md-4" routerLink="/equipo/Consuelo">
           <div class="member" data-aos="fade-up" data-aos-delay="400">
-            <div class="pic"><img src="assets/img/Consuelo-saravia-frias.jpg" alt=""></div>
+            <div class="pic">
+              <img
+                src="https://res.cloudinary.com/ricardo3874/image/upload/v1658979622/Abogados%20sfc/DSC02475_ptbuea.jpg"
+                alt="" />
+            </div>
             <h4>Consuelo Saravia Frias</h4>
             <span>Asociada a Saravia Frías | Cornejo Abogados</span>
             <div class="social">
-              <a href=""><i class="bi bi-twitter"></i></a>
-              <a href=""><i class="bi bi-facebook"></i></a>
-              <a href=""><i class="bi bi-instagram"></i></a>
-              <a href=""><i class="bi bi-linkedin"></i></a>
+              <a><i class="bi bi-twitter"></i></a>
+              <a><i class="bi bi-facebook"></i></a>
+              <a><i class="bi bi-instagram"></i></a>
+              <a><i class="bi bi-linkedin"></i></a>
             </div>
           </div>
         </div>
 
         <div class="col-lg-4 col-md-4" routerLink="/equipo/Diego">
           <div class="member" data-aos="fade-up" data-aos-delay="500">
-            <div class="pic"><img src="assets/img/diego-juncosa.jpg" alt=""></div>
+            <div class="pic">
+              <img
+                src="https://res.cloudinary.com/ricardo3874/image/upload/v1658979582/Abogados%20sfc/DSC02514_jbj4om.jpg"
+                alt="" />
+            </div>
             <h4>Diego Juncosa Cornejo</h4>
             <span>Asociado a Saravia Frías | Cornejo Abogados</span>
             <div class="social">
-              <a href=""><i class="bi bi-twitter"></i></a>
-              <a href=""><i class="bi bi-facebook"></i></a>
-              <a href=""><i class="bi bi-instagram"></i></a>
-              <a href=""><i class="bi bi-linkedin"></i></a>
+              <a><i class="bi bi-twitter"></i></a>
+              <a><i class="bi bi-facebook"></i></a>
+              <a><i class="bi bi-instagram"></i></a>
+              <a><i class="bi bi-linkedin"></i></a>
             </div>
           </div>
         </div>
 
-        <div class="col-lg-4 col-md-4" routerLink="/equipo/Sofia">
+        <!-- <div class="col-lg-4 col-md-4" routerLink="/equipo/Sofia">
           <div class="member" data-aos="fade-up" data-aos-delay="600">
-            <div class="pic"><img src="assets/img/Sofia-Paz-Figueroa.jpg" alt=""></div>
+            <div class="pic">
+              <img src="assets/img/Sofia-Paz-Figueroa.jpg" alt="" />
+            </div>
             <h4>Sofia Paz Figueroa</h4>
             <span>Asociada a Saravia Frías | Cornejo Abogados</span>
             <div class="social">
-              <a href=""><i class="bi bi-twitter"></i></a>
-              <a href=""><i class="bi bi-facebook"></i></a>
-              <a href=""><i class="bi bi-instagram"></i></a>
-              <a href=""><i class="bi bi-linkedin"></i></a>
+              <a><i class="bi bi-twitter"></i></a>
+              <a><i class="bi bi-facebook"></i></a>
+              <a><i class="bi bi-instagram"></i></a>
+              <a><i class="bi bi-linkedin"></i></a>
             </div>
           </div>
-        </div>
+        </div> -->
       </div>
-
     </div>
-  </section><!-- End Team Section -->
+  </section>
+  <!-- End Team Section -->
 
   <!-- ======= Contact Section ======= -->
   <section id="contact">
@@ -459,17 +635,20 @@
     </div>
 
     <!-- Uncomment below if you wan to use dynamic maps -->
-    <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d14489.500278227917!2d-65.407234!3d-24.7826072!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x4cb6db77eeb01ed7!2sESTUDIO+SARAVIA+FRIAS+%26+CORNEJO!5e0!3m2!1ses-419!2sar!4v1547498795928" width="100%" height="380" frameborder="0" style="border:0" allowfullscreen></iframe>
+    <iframe
+      src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d14489.500278227917!2d-65.407234!3d-24.7826072!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x4cb6db77eeb01ed7!2sESTUDIO+SARAVIA+FRIAS+%26+CORNEJO!5e0!3m2!1ses-419!2sar!4v1547498795928"
+      width="100%" height="380" frameborder="0" style="border: 0" allowfullscreen></iframe>
 
     <div class="container mt-5">
       <div class="row justify-content-center">
-
         <div class="col-lg-3 col-md-4">
-
           <div class="info">
             <div>
               <i class="bi bi-geo-alt"></i>
-              <p>Rivadavia 378 <br> CP4400 - Salta, Argentina</p>
+              <p>
+                Rivadavia 378 <br />
+                CP4400 - Salta, Argentina
+              </p>
             </div>
 
             <div>
@@ -489,20 +668,19 @@
             <a href="#" class="instagram"><i class="bi bi-instagram"></i></a>
             <a href="#" class="linkedin"><i class="bi bi-linkedin"></i></a>
           </div> -->
-
         </div>
 
         <div class="col-lg-5 col-md-8">
           <div class="form">
             <form action="forms/contact.php" method="post" role="form" class="php-email-form">
               <div class="form-group">
-                <input type="text" name="name" class="form-control" id="name" placeholder="Your Name" required>
+                <input type="text" name="name" class="form-control" id="name" placeholder="Your Name" required />
               </div>
               <div class="form-group mt-3">
-                <input type="email" class="form-control" name="email" id="email" placeholder="Your Email" required>
+                <input type="email" class="form-control" name="email" id="email" placeholder="Your Email" required />
               </div>
               <div class="form-group mt-3">
-                <input type="text" class="form-control" name="subject" id="subject" placeholder="Subject" required>
+                <input type="text" class="form-control" name="subject" id="subject" placeholder="Subject" required />
               </div>
               <div class="form-group mt-3">
                 <textarea class="form-control" name="message" rows="5" placeholder="Message" required></textarea>
@@ -510,26 +688,27 @@
               <div class="my-3">
                 <div class="loading">Loading</div>
                 <div class="error-message"></div>
-                <div class="sent-message">Su mensaje ha sido enviado. Gracias</div>
+                <div class="sent-message">
+                  Su mensaje ha sido enviado. Gracias
+                </div>
               </div>
-              <div class="text-center"><button type="submit">Enviar Mensaje</button></div>
+              <div class="text-center">
+                <button type="submit">Enviar Mensaje</button>
+              </div>
             </form>
           </div>
         </div>
-
       </div>
-
     </div>
-  </section><!-- End Contact Section -->
-
-</main><!-- End #main -->
+  </section>
+  <!-- End Contact Section -->
+</main>
+<!-- End #main -->
 
 <!-- ======= Footer ======= -->
 <footer id="footer">
   <div class="footer-top">
-    <div class="container">
-
-    </div>
+    <div class="container"></div>
   </div>
 
   <div class="container">
@@ -545,6 +724,8 @@
     -->
     </div>
   </div>
-</footer><!-- End Footer -->
+</footer>
+<!-- End Footer -->
 
-<a href="#" class="back-to-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
+<a href="#" class="back-to-top d-flex align-items-center justify-content-center"><i
+    class="bi bi-arrow-up-short"></i></a>
