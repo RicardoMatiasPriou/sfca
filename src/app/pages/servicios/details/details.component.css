@@ -1,0 +1,17 @@
+
+.img-cover{
+    background-size: cover !important;}
+#servicios{
+  width: 100%;
+  height: 100%;
+  background-color: black;
+}
+@media (min-width: 992px) {
+  .img-detalle{
+    height: 100%;
+  }
+}
+
+.dd{
+  background-color: #474d52!important;
+}

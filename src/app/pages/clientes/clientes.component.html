@@ -1,116 +1,237 @@
-<header id="header" class="fixed-top d-flex align-items-center header-transparent " (scroll)="onscroll()" [ngClass]="navbarfixed?'header-scrolled':''" >
+<header id="header" class="fixed-top d-flex align-items-center header-transparent" (scroll)="onscroll()"
+  [ngClass]="navbarfixed ? 'header-scrolled' : ''">
   <div class="container d-flex justify-content-between align-items-center">
-
     <div id="logo">
-      <a routerLink="/"><img src="assets/img/logo_.png" width="110px" alt=""></a>
-      <!-- Uncomment below if you prefer to use a text logo -->
-      <!--<h1><a href="index.html">Regna</a></h1>-->
+      <a routerLink="/"><img src="assets/img/logo_.png" width="110px" alt="" /></a>
     </div>
 
     <nav id="navbar" class="navbar">
       <ul>
-        <li><a class="nav-link scrollto " [routerLink]="['/']" routerLinkActive="" >Inicio</a></li>
-        <li class="dropdown"><a  [routerLink]="['/servicios']" routerLinkActive="active"><span>Servicios</span> <i class="bi bi-chevron-down"></i></a>
+        <li>
+          <a class="nav-link scrollto" [routerLink]="['/home']" routerLinkActive="active">Inicio</a>
+        </li>
+        <li class="dropdown">
+          <a [routerLink]="['/servicios']" routerLinkActive="active"><span>Servicios</span> <i
+              class="bi bi-chevron-down"></i></a>
           <ul>
-            <li><a  [routerLink]="['/servicios/Mineria']" routerLinkActive="active">Mineria</a></li>
-            <!-- <li class="dropdown"><a href="#"><span>Deep Drop Down</span> <i class="bi bi-chevron-right"></i></a>
-              <ul>
-                <li><a href="#">Deep Drop Down 1</a></li>
-                <li><a href="#">Deep Drop Down 2</a></li>
-                <li><a href="#">Deep Drop Down 3</a></li>
-                <li><a href="#">Deep Drop Down 4</a></li>
-                <li><a href="#">Deep Drop Down 5</a></li>
-              </ul>
-            </li> -->
-            <li><a  [routerLink]="['/servicios/Hidrocarburos']" routerLinkActive="active">Hidrocarburos</a></li>
-            <li><a  [routerLink]="['/servicios/Medioambiente']" routerLinkActive="active">Medioambiente – Recursos Hídricos</a></li>
-            <li><a  [routerLink]="['/servicios/Corporativo']" routerLinkActive="active">Corporativo</a></li>
+            <li>
+              <a [routerLink]="['/servicios/Mineria']" routerLinkActive="active">Mineria</a>
+            </li>
+
+            <li>
+              <a [routerLink]="['/servicios/Hidrocarburos']" routerLinkActive="active">Hidrocarburos</a>
+            </li>
+            <li>
+              <a [routerLink]="['/servicios/Medioambiente']" routerLinkActive="active">Medioambiente – Recursos
+                Hídricos</a>
+            </li>
+            <li>
+              <a [routerLink]="['/servicios/Corporativo']" routerLinkActive="active">Corporativo</a>
+            </li>
           </ul>
         </li>
-        <li class="dropdown"><a [routerLink]="['/equipo']" routerLinkActive="active"><span>Equipo</span> <i class="bi bi-chevron-down"></i></a>
+        <li class="dropdown">
+          <a [routerLink]="['/equipo']" routerLinkActive="active"><span>Equipo</span> <i
+              class="bi bi-chevron-down"></i></a>
           <ul>
             <li><a routerLink="/equipo/Santiago">Santiago Saravia Frias</a></li>
-            <!-- <li class="dropdown"><a href="#"><span>Deep Drop Down</span> <i class="bi bi-chevron-right"></i></a>
-              <ul>
-                <li><a href="#">Deep Drop Down 1</a></li>
-                <li><a href="#">Deep Drop Down 2</a></li>
-                <li><a href="#">Deep Drop Down 3</a></li>
-                <li><a href="#">Deep Drop Down 4</a></li>
-                <li><a href="#">Deep Drop Down 5</a></li>
-              </ul>
-            </li> -->
             <li><a routerLink="/equipo/Agustín">Agustín Saravia Frías</a></li>
             <li><a routerLink="/equipo/Lucas">Lucas Cornejo Fossati</a></li>
             <li><a routerLink="/equipo/Consuelo">Consuelo Saravia Frias</a></li>
             <li><a routerLink="/equipo/Diego">Diego Juncosa Cornejo</a></li>
-            <li><a routerLink="/equipo/Sofia">Sofia Paz Figueroa</a></li>
-
+            <li><a routerLink="/equipo/Elisea">Elisea Agolio</a></li>
           </ul>
         </li>
-        <li><a class="nav-link scrollto" routerLink='/clientes' routerLinkActive="active">Clientes</a></li>
-        <li><a class="nav-link scrollto" routerLink='/novedades' routerLinkActive="active">Novedades</a></li>
-        <li><a class="nav-link scrollto " routerLink='/contactenos' routerLinkActive="active">Contactenos</a></li>
+        <li>
+          <a class="nav-link scrollto" routerLink="/clientes" routerLinkActive="active">Clientes</a>
+        </li>
+        <li>
+          <a class="nav-link scrollto" routerLink="/novedades" routerLinkActive="active">Novedades</a>
+        </li>
+        <li>
+          <a class="nav-link scrollto" routerLink="/contactenos" routerLinkActive="active">Contactenos</a>
+        </li>
       </ul>
-      <i class="bi bi-list mobile-nav-toggle" data-bs-toggle="offcanvas" href="#offcanvasExample" role="button" aria-controls="offcanvasExample" > </i>
-      <div class="offcanvas offcanvas-end bg-black text-white" tabindex="-1" id="offcanvasExample" aria-labelledby="offcanvasExampleLabel">
+      <i class="bi bi-list mobile-nav-toggle" data-bs-toggle="offcanvas" href="#offcanvasExample" role="button"
+        aria-controls="offcanvasExample">
+      </i>
+      <div class="offcanvas offcanvas-end bg-black text-white" tabindex="-1" id="offcanvasExample"
+        aria-labelledby="offcanvasExampleLabel" style="    z-index: 10000000;">
         <div class="offcanvas-header">
           <h5 class="offcanvas-title" id="offcanvasExampleLabel"></h5>
-          <button type="button" class="btn-close text-white" data-bs-dismiss="offcanvas" aria-label="Close" style="filter: invert(1);"></button>
+          <button type="button" class="btn-close text-white" data-bs-dismiss="offcanvas" aria-label="Close"
+            style="filter: invert(1)"></button>
         </div>
         <div class="offcanvas-body">
-          <div class=""  >
-
-          <ul style="display: block;">
-            <li class="py-3"><a class="nav-link scrollto " [routerLink]="['/']" routerLinkActive="active" >Inicio</a></li>
-            <li class="dropdown py-3"><a  [routerLink]="['/servicios']" routerLinkActive="active"><span>Servicios</span> <i class="bi bi-chevron-down"></i></a>
-              <ul>
-                <li><a  [routerLink]="['/servicios/:Mineria']" routerLinkActive="active">Mineria</a></li>
-                <!-- <li class="dropdown"><a href="#"><span>Deep Drop Down</span> <i class="bi bi-chevron-right"></i></a>
-                  <ul>
-                    <li><a href="#">Deep Drop Down 1</a></li>
-                    <li><a href="#">Deep Drop Down 2</a></li>
-                    <li><a href="#">Deep Drop Down 3</a></li>
-                    <li><a href="#">Deep Drop Down 4</a></li>
-                    <li><a href="#">Deep Drop Down 5</a></li>
-                  </ul>
-                </li> -->
-                <li><a  [routerLink]="['/servicios/:Hidrocarburos']" routerLinkActive="active">Hidrocarburos</a></li>
-                <li><a  [routerLink]="['/servicios/:Medioambiente']" routerLinkActive="active">Medioambiente – Recursos Hídricos</a></li>
-                <li><a  [routerLink]="['/servicios/:Corporativo']" routerLinkActive="active">Corporativo</a></li>
-              </ul>
-            </li>
-            <li class="dropdown py-3"><a [routerLink]="['/equipo']" routerLinkActive="active"><span>Equipo</span> <i class="bi bi-chevron-down"></i></a>
-              <ul>
-                <li><a routerLink="/equipo/Santiago">Santiago Saravia Frias</a></li>
-                <!-- <li class="dropdown"><a href="#"><span>Deep Drop Down</span> <i class="bi bi-chevron-right"></i></a>
-                  <ul>
-                    <li><a href="#">Deep Drop Down 1</a></li>
-                    <li><a href="#">Deep Drop Down 2</a></li>
-                    <li><a href="#">Deep Drop Down 3</a></li>
-                    <li><a href="#">Deep Drop Down 4</a></li>
-                    <li><a href="#">Deep Drop Down 5</a></li>
-                  </ul>
-                </li> -->
-                <li><a routerLink="/equipo/Agustín">Agustín Saravia Frías</a></li>
-                <li><a routerLink="/equipo/Lucas">Lucas Cornejo Fossati</a></li>
-                <li><a routerLink="/equipo/Consuelo">Consuelo Saravia Frias</a></li>
-                <li><a routerLink="/equipo/Diego">Diego Juncosa Cornejo</a></li>
-                <li><a routerLink="/equipo/Sofia">Sofia Paz Figueroa</a></li>
-
-              </ul>
-            </li>
-            <li class="py-3"><a class="nav-link scrollto" routerLink='/clientes' routerLinkActive="active">Clientes</a></li>
-            <li class="py-3"><a class="nav-link scrollto" routerLink='/novedades' routerLinkActive="active">Novedades</a></li>
-            <li class="py-3"><a class="nav-link scrollto " routerLink='/contactenos' routerLinkActive="active">Contactenos</a></li>
-          </ul>
-        </div>
+          <div class="">
+            <ul style="display: block">
+              <li class="py-3">
+                <a class="nav-link scrollto" [routerLink]="['/']" routerLinkActive="active">Inicio</a>
+              </li>
+              <li class="dropdown py-3">
+                <a href="#" routerLinkActive="active"><span>Servicios</span> <i class="bi bi-chevron-down"></i></a>
+                <ul>
+                  <li>
+                    <a [routerLink]="['/servicios/Mineria']" routerLinkActive="active">Mineria</a>
+                  </li>
+                  <li>
+                    <a [routerLink]="['/servicios/Hidrocarburos']" routerLinkActive="active">Hidrocarburos</a>
+                  </li>
+                  <li>
+                    <a [routerLink]="['/servicios/Medioambiente']" routerLinkActive="active">Medioambiente – Recursos
+                      Hídricos</a>
+                  </li>
+                  <li>
+                    <a [routerLink]="['/servicios/Corporativo']" routerLinkActive="active">Corporativo</a>
+                  </li>
+                </ul>
+              </li>
+              <li class="dropdown py-3">
+                <a routerLinkActive="active"><span>Equipo</span> <i class="bi bi-chevron-down"></i></a>
+                <ul>
+                  <li>
+                    <a routerLink="/equipo/Santiago">Santiago Saravia Frias</a>
+                  </li>
+                  <li>
+                    <a routerLink="/equipo/Agustín">Agustín Saravia Frías</a>
+                  </li>
+                  <li>
+                    <a routerLink="/equipo/Lucas">Lucas Cornejo Fossati</a>
+                  </li>
+                  <li>
+                    <a routerLink="/equipo/Consuelo">Consuelo Saravia Frias</a>
+                  </li>
+                  <li>
+                    <a routerLink="/equipo/Diego">Diego Juncosa Cornejo</a>
+                  </li>
+                  <li><a routerLink="/equipo/Elisea">Elisea Agolio</a></li>
+                </ul>
+              </li>
+              <li class="py-3">
+                <a class="nav-link scrollto" routerLink="/clientes" routerLinkActive="active">Clientes</a>
+              </li>
+              <li class="py-3">
+                <a class="nav-link scrollto" routerLink="/novedades" routerLinkActive="active">Novedades</a>
+              </li>
+              <li class="py-3">
+                <a class="nav-link scrollto" routerLink="/contactenos" routerLinkActive="active">Contactenos</a>
+              </li>
+            </ul>
+          </div>
         </div>
       </div>
-    </nav><!-- .navbar -->
+    </nav>
+    <!-- .navbar -->
   </div>
-</header><!-- End Header -->
+</header>
+
+<main>
+<section id="contact">
+  <div class="continer img_novedades">
+    <div class="col-12">
+      <div class="title text-center" style="padding-top: 46px">
+        <p class="section-description" style="
+    text-transform: uppercase;
+    text-align: center;
+    padding-bottom: 0px;
+    font-size: 28px;
+    font-family: -webkit-body;
+    font-weight: 700;
+    padding-top: 20px;
+    margin-top: 80px;
+    color: white;
+    text-shadow: 6px 0px 5px black;
+          ">
+Clientes        </p>
+      </div>
+    </div>
+  </div>
+
+
+  <div class="resume-body p-5">
+    <div class="row">
+      <div class=" col-sm-4 col-md-4">
+
+        <section class="resume-section summary-section mb-5">
+          <h2 class="resume-section-title text-uppercase font-weight-bold pb-3 mb-3">MINERIA</h2>
+          <div class="resume-section-content">
+            <ul class="mb-0" >
+              <li>Silex Argentina S.A.
+              </li>
+              <li>Colque Exploraciones S.A.
+              </li>
+              <li>Aldebaran Argentina S.A.
+              </li>
+              <li>Minera El Toro S.A.
+              </li>
+              <li>Borax Argentina S.A.
+              </li>
+              <li>Sales de Jujuy S.A.
+              </li>
+              <li>South American Salars S.A.</li>
+              <li>Cascadero Minerals S.A.</li>
+              <li>Salta Geothermal S.A.</li>
+              <li>Yamana Argentina Servicios Mineros S.A.</li>
+              <li>Cosmos Minerals S.A.</li>
+              <li>NRG Metals Argentina S.A.</li>
+              <li>Hanaq Argentina S.A.</li>
+              <li>Hancolla S.A.</li>
+              <li>Hanari S.A.</li>
+            </ul>
+          </div>
+        </section>
+      </div>
+      <div class=" col-sm-4 col-md-4">
+
+        <section class="resume-section summary-section mb-5">
+          <h2 class="resume-section-title text-uppercase font-weight-bold pb-3 mb-3">HIDROCARBUROS</h2>
+          <div class="resume-section-content">
+              <ul class="mb-0">
+                <li>Vista Oil & Gas Argentina S.A.U.
+                </li>
+                <li>Compañía General de Combustible S.A.</li>
+              </ul>
+          </div>
+        </section>
+      </div>
+      <div class=" col-sm-4 col-md-4">
+
+        <section class="resume-section summary-section mb-5">
+          <h2 class="resume-section-title text-uppercase font-weight-bold pb-3 mb-3">SEGUROS</h2>
+          <div class="resume-section-content">
+              <ul class="mb-0">
+                <li>QBE Seguros La Buenos Aires S.A.
+                </li>
+                <li>Mapfre Argentina Seguros S.A.</li>
+                <li>Orígenes Seguro de Retiro S.A.</li>
+                <li>Galicia Seguros S.A.</li>
+                <li>ACE Seguros S.A.</li>
+                <li>Experta ART S.A.</li>
+                <li>Galeno Seguros S.A.</li>
+                <li>Caledonia Seguros S.A.</li>
+                <li>Experta ART S.A.</li>
+              </ul>
+          </div>
+        </section>
+      </div>
+    </div>
+        <section class="resume-section summary-section mb-5" >
+          <h2 class="resume-section-title text-uppercase font-weight-bold pb-3 mb-3">OTROS</h2>
+          <div class="resume-section-content">
+            <ul class="mb-0"  >
+              <li>Fundación Hanaq</li>
+               <li>First Data Cono Sur S.R.L Círculo de Inversores</li>
+
+            </ul>
+          </div>
+        </section>
+  </div>
 
 
 
 
-<app-footer></app-footer>
+  <!-- ======= About Section ======= -->
+</section>
+</main>
+  <app-footer></app-footer>
+

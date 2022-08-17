@@ -10,15 +10,16 @@ import { ServiciosComponent } from './pages/servicios/servicios.component';
 import { ContactoComponent } from './pages/contacto/contacto.component';
 
 const routes: Routes = [
-  {path:'', pathMatch: 'full' , component:HomeComponent},
+  {path:'home', pathMatch: 'full' , component:HomeComponent},
   // {path:'servicios',component: ServiciosComponent},
-  // {path:'servicios/:id',component: DetailsComponent},
+  {path:'servicios/:id',component: DetailsComponent},
   // {path:'equipo',component: EquipoComponent},
-  // {path:'equipo/:id',component: DetailsComponente},
-  // {path:'clientes',component: ClientesComponent},
-  // {path:'novedades',component: NovedadesComponent},
-  // {path:'contactenos',component: ContactoComponent},
-  {path:'**', redirectTo:''}
+  {path:'equipo/:id',component: DetailsComponente},
+  {path:'clientes',component: ClientesComponent},
+  {path:'novedades',component: NovedadesComponent},
+  {path:'contactenos',component: ContactoComponent},
+  {path:'**', redirectTo:'/home'},
+
 
 
 ];

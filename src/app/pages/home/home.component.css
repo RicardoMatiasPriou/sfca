@@ -108,7 +108,8 @@ H1{
   color: #fff;
   border-color: #474d52;
   background-color: #474d52;
-  font-family: 'Times New Roman', Times, serif
+  font-family: 'Times New Roman', Times, serif;
+  margin-bottom: 25px
 }
 .btn-outline-secondary:hover {
   color: #474d52;
@@ -130,4 +131,8 @@ display: none;
 }
 .offcanvas-backdrop.show {
   display: none !important
+}
+.offcanvas-backdrop.show {
+ opacity: 0;
+ display: none !important
 }

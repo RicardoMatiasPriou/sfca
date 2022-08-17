@@ -1,16 +1,15 @@
 import { Component, HostListener, OnInit } from '@angular/core';
 
 @Component({
-  selector: 'app-home',
-  templateUrl: './home.component.html',
-  styleUrls: ['./home.component.css']
+  selector: 'app-navbar',
+  templateUrl: './navbar.component.html',
+  styleUrls: ['./navbar.component.css']
 })
-export class HomeComponent implements OnInit {
+export class NavbarComponent implements OnInit {
 
   constructor() { }
 
   ngOnInit(): void {
-    scroll(0, 0)
   }
   navbarfixed:boolean = false;
 
@@ -24,6 +23,4 @@ export class HomeComponent implements OnInit {
       this.navbarfixed = false;
     }
   }
-
-
 }

@@ -1,4 +1,5 @@
 import { Component, HostListener, OnInit } from '@angular/core';
+import { Title } from '@angular/platform-browser';
 
 @Component({
   selector: 'app-novedades',
@@ -7,9 +8,13 @@ import { Component, HostListener, OnInit } from '@angular/core';
 })
 export class NovedadesComponent implements OnInit {
 
-  constructor() { }
+  constructor( private titulo:Title) {
+    titulo.setTitle('Novedades');
+   }
 
   ngOnInit(): void {
+    scroll(0, 0)
+
   }
   navbarfixed:boolean = false;
 

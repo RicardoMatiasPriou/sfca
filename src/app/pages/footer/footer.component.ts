@@ -10,6 +10,7 @@ export class FooterComponent implements OnInit {
   constructor() { }
 
   ngOnInit(): void {
+    scroll(0, 0)
   }
 
 }

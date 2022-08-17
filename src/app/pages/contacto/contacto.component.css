@@ -1,0 +1,28 @@
+.img_novedades{
+  width: 100%;
+  height: 311px;
+  background: url(https://res.cloudinary.com/ricardo3874/image/upload/v1658979972/Abogados%20sfc/C_hnhrk3.jpg);
+  background-size: cover;
+  margin-top: -83px;
+}
+.conainer_novedades_contex:before{
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 252px;
+  z-index: 0;
+  background: linear-gradient(to bottom, #2c2c2c91, transparent);}
+  .btn-outline-secondary {
+    color: #fff;
+    border-color: #474d52;
+    background-color: #474d52;
+    font-family: 'Times New Roman', Times, serif;
+    margin-bottom: 25px
+  }
+  .btn-outline-secondary:hover {
+    color: #474d52;
+    background-color: #fff;
+    border-color: #474d52;
+  }

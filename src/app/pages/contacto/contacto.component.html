@@ -1,115 +1,224 @@
-<header id="header" class="fixed-top d-flex align-items-center header-transparent " (scroll)="onscroll()" [ngClass]="navbarfixed?'header-scrolled':''" >
+<header id="header" class="fixed-top d-flex align-items-center header-transparent" (scroll)="onscroll()"
+  [ngClass]="navbarfixed ? 'header-scrolled' : ''">
   <div class="container d-flex justify-content-between align-items-center">
-
     <div id="logo">
-      <a routerLink="/"><img src="assets/img/logo_.png" width="110px" alt=""></a>
-      <!-- Uncomment below if you prefer to use a text logo -->
-      <!--<h1><a href="index.html">Regna</a></h1>-->
+      <a routerLink="/"><img src="assets/img/logo_.png" width="110px" alt="" /></a>
     </div>
 
     <nav id="navbar" class="navbar">
       <ul>
-        <li><a class="nav-link scrollto " [routerLink]="['/']" routerLinkActive="" >Inicio</a></li>
-        <li class="dropdown"><a  [routerLink]="['/servicios']" routerLinkActive="active"><span>Servicios</span> <i class="bi bi-chevron-down"></i></a>
+        <li>
+          <a class="nav-link scrollto" [routerLink]="['/home']" routerLinkActive="active">Inicio</a>
+        </li>
+        <li class="dropdown">
+          <a [routerLink]="['/servicios']" routerLinkActive="active"><span>Servicios</span> <i
+              class="bi bi-chevron-down"></i></a>
           <ul>
-            <li><a  [routerLink]="['/servicios/Mineria']" routerLinkActive="active">Mineria</a></li>
-            <!-- <li class="dropdown"><a href="#"><span>Deep Drop Down</span> <i class="bi bi-chevron-right"></i></a>
-              <ul>
-                <li><a href="#">Deep Drop Down 1</a></li>
-                <li><a href="#">Deep Drop Down 2</a></li>
-                <li><a href="#">Deep Drop Down 3</a></li>
-                <li><a href="#">Deep Drop Down 4</a></li>
-                <li><a href="#">Deep Drop Down 5</a></li>
-              </ul>
-            </li> -->
-            <li><a  [routerLink]="['/servicios/Hidrocarburos']" routerLinkActive="active">Hidrocarburos</a></li>
-            <li><a  [routerLink]="['/servicios/Medioambiente']" routerLinkActive="active">Medioambiente – Recursos Hídricos</a></li>
-            <li><a  [routerLink]="['/servicios/Corporativo']" routerLinkActive="active">Corporativo</a></li>
+            <li>
+              <a [routerLink]="['/servicios/Mineria']" routerLinkActive="active">Mineria</a>
+            </li>
+
+            <li>
+              <a [routerLink]="['/servicios/Hidrocarburos']" routerLinkActive="active">Hidrocarburos</a>
+            </li>
+            <li>
+              <a [routerLink]="['/servicios/Medioambiente']" routerLinkActive="active">Medioambiente – Recursos
+                Hídricos</a>
+            </li>
+            <li>
+              <a [routerLink]="['/servicios/Corporativo']" routerLinkActive="active">Corporativo</a>
+            </li>
           </ul>
         </li>
-        <li class="dropdown"><a [routerLink]="['/equipo']" routerLinkActive="active"><span>Equipo</span> <i class="bi bi-chevron-down"></i></a>
+        <li class="dropdown">
+          <a [routerLink]="['/equipo']" routerLinkActive="active"><span>Equipo</span> <i
+              class="bi bi-chevron-down"></i></a>
           <ul>
             <li><a routerLink="/equipo/Santiago">Santiago Saravia Frias</a></li>
-            <!-- <li class="dropdown"><a href="#"><span>Deep Drop Down</span> <i class="bi bi-chevron-right"></i></a>
-              <ul>
-                <li><a href="#">Deep Drop Down 1</a></li>
-                <li><a href="#">Deep Drop Down 2</a></li>
-                <li><a href="#">Deep Drop Down 3</a></li>
-                <li><a href="#">Deep Drop Down 4</a></li>
-                <li><a href="#">Deep Drop Down 5</a></li>
-              </ul>
-            </li> -->
             <li><a routerLink="/equipo/Agustín">Agustín Saravia Frías</a></li>
             <li><a routerLink="/equipo/Lucas">Lucas Cornejo Fossati</a></li>
             <li><a routerLink="/equipo/Consuelo">Consuelo Saravia Frias</a></li>
             <li><a routerLink="/equipo/Diego">Diego Juncosa Cornejo</a></li>
-            <li><a routerLink="/equipo/Sofia">Sofia Paz Figueroa</a></li>
-
+            <li><a routerLink="/equipo/Elisea">Elisea Agolio</a></li>
           </ul>
         </li>
-        <li><a class="nav-link scrollto" routerLink='/clientes' routerLinkActive="active">Clientes</a></li>
-        <li><a class="nav-link scrollto" routerLink='/novedades' routerLinkActive="active">Novedades</a></li>
-        <li><a class="nav-link scrollto " routerLink='/contactenos' routerLinkActive="active">Contactenos</a></li>
+        <li>
+          <a class="nav-link scrollto" routerLink="/clientes" routerLinkActive="active">Clientes</a>
+        </li>
+        <li>
+          <a class="nav-link scrollto" routerLink="/novedades" routerLinkActive="active">Novedades</a>
+        </li>
+        <li>
+          <a class="nav-link scrollto" routerLink="/contactenos" routerLinkActive="active">Contactenos</a>
+        </li>
       </ul>
-      <i class="bi bi-list mobile-nav-toggle" data-bs-toggle="offcanvas" href="#offcanvasExample" role="button" aria-controls="offcanvasExample" > </i>
-      <div class="offcanvas offcanvas-end bg-black text-white" tabindex="-1" id="offcanvasExample" aria-labelledby="offcanvasExampleLabel">
+      <i class="bi bi-list mobile-nav-toggle" data-bs-toggle="offcanvas" href="#offcanvasExample" role="button"
+        aria-controls="offcanvasExample">
+      </i>
+      <div class="offcanvas offcanvas-end bg-black text-white" tabindex="-1" id="offcanvasExample"
+        aria-labelledby="offcanvasExampleLabel" style="    z-index: 10000000;">
         <div class="offcanvas-header">
           <h5 class="offcanvas-title" id="offcanvasExampleLabel"></h5>
-          <button type="button" class="btn-close text-white" data-bs-dismiss="offcanvas" aria-label="Close" style="filter: invert(1);"></button>
+          <button type="button" class="btn-close text-white" data-bs-dismiss="offcanvas" aria-label="Close"
+            style="filter: invert(1)"></button>
         </div>
         <div class="offcanvas-body">
-          <div class=""  >
-
-          <ul style="display: block;">
-            <li class="py-3"><a class="nav-link scrollto " [routerLink]="['/']" routerLinkActive="active" >Inicio</a></li>
-            <li class="dropdown py-3"><a  [routerLink]="['/servicios']" routerLinkActive="active"><span>Servicios</span> <i class="bi bi-chevron-down"></i></a>
-              <ul>
-                <li><a  [routerLink]="['/servicios/:Mineria']" routerLinkActive="active">Mineria</a></li>
-                <!-- <li class="dropdown"><a href="#"><span>Deep Drop Down</span> <i class="bi bi-chevron-right"></i></a>
-                  <ul>
-                    <li><a href="#">Deep Drop Down 1</a></li>
-                    <li><a href="#">Deep Drop Down 2</a></li>
-                    <li><a href="#">Deep Drop Down 3</a></li>
-                    <li><a href="#">Deep Drop Down 4</a></li>
-                    <li><a href="#">Deep Drop Down 5</a></li>
-                  </ul>
-                </li> -->
-                <li><a  [routerLink]="['/servicios/:Hidrocarburos']" routerLinkActive="active">Hidrocarburos</a></li>
-                <li><a  [routerLink]="['/servicios/:Medioambiente']" routerLinkActive="active">Medioambiente – Recursos Hídricos</a></li>
-                <li><a  [routerLink]="['/servicios/:Corporativo']" routerLinkActive="active">Corporativo</a></li>
-              </ul>
-            </li>
-            <li class="dropdown py-3"><a [routerLink]="['/equipo']" routerLinkActive="active"><span>Equipo</span> <i class="bi bi-chevron-down"></i></a>
-              <ul>
-                <li><a routerLink="/equipo/Santiago">Santiago Saravia Frias</a></li>
-                <!-- <li class="dropdown"><a href="#"><span>Deep Drop Down</span> <i class="bi bi-chevron-right"></i></a>
-                  <ul>
-                    <li><a href="#">Deep Drop Down 1</a></li>
-                    <li><a href="#">Deep Drop Down 2</a></li>
-                    <li><a href="#">Deep Drop Down 3</a></li>
-                    <li><a href="#">Deep Drop Down 4</a></li>
-                    <li><a href="#">Deep Drop Down 5</a></li>
-                  </ul>
-                </li> -->
-                <li><a routerLink="/equipo/Agustín">Agustín Saravia Frías</a></li>
-                <li><a routerLink="/equipo/Lucas">Lucas Cornejo Fossati</a></li>
-                <li><a routerLink="/equipo/Consuelo">Consuelo Saravia Frias</a></li>
-                <li><a routerLink="/equipo/Diego">Diego Juncosa Cornejo</a></li>
-                <li><a routerLink="/equipo/Sofia">Sofia Paz Figueroa</a></li>
-
-              </ul>
-            </li>
-            <li class="py-3"><a class="nav-link scrollto" routerLink='/clientes' routerLinkActive="active">Clientes</a></li>
-            <li class="py-3"><a class="nav-link scrollto" routerLink='/novedades' routerLinkActive="active">Novedades</a></li>
-            <li class="py-3"><a class="nav-link scrollto " routerLink='/contactenos' routerLinkActive="active">Contactenos</a></li>
-          </ul>
-        </div>
+          <div class="">
+            <ul style="display: block">
+              <li class="py-3">
+                <a class="nav-link scrollto" [routerLink]="['/']" routerLinkActive="active">Inicio</a>
+              </li>
+              <li class="dropdown py-3">
+                <a href="#" routerLinkActive="active"><span>Servicios</span> <i class="bi bi-chevron-down"></i></a>
+                <ul>
+                  <li>
+                    <a [routerLink]="['/servicios/Mineria']" routerLinkActive="active">Mineria</a>
+                  </li>
+                  <li>
+                    <a [routerLink]="['/servicios/Hidrocarburos']" routerLinkActive="active">Hidrocarburos</a>
+                  </li>
+                  <li>
+                    <a [routerLink]="['/servicios/Medioambiente']" routerLinkActive="active">Medioambiente – Recursos
+                      Hídricos</a>
+                  </li>
+                  <li>
+                    <a [routerLink]="['/servicios/Corporativo']" routerLinkActive="active">Corporativo</a>
+                  </li>
+                </ul>
+              </li>
+              <li class="dropdown py-3">
+                <a routerLinkActive="active"><span>Equipo</span> <i class="bi bi-chevron-down"></i></a>
+                <ul>
+                  <li>
+                    <a routerLink="/equipo/Santiago">Santiago Saravia Frias</a>
+                  </li>
+                  <li>
+                    <a routerLink="/equipo/Agustín">Agustín Saravia Frías</a>
+                  </li>
+                  <li>
+                    <a routerLink="/equipo/Lucas">Lucas Cornejo Fossati</a>
+                  </li>
+                  <li>
+                    <a routerLink="/equipo/Consuelo">Consuelo Saravia Frias</a>
+                  </li>
+                  <li>
+                    <a routerLink="/equipo/Diego">Diego Juncosa Cornejo</a>
+                  </li>
+                  <li><a routerLink="/equipo/Elisea">Elisea Agolio</a></li>
+                </ul>
+              </li>
+              <li class="py-3">
+                <a class="nav-link scrollto" routerLink="/clientes" routerLinkActive="active">Clientes</a>
+              </li>
+              <li class="py-3">
+                <a class="nav-link scrollto" routerLink="/novedades" routerLinkActive="active">Novedades</a>
+              </li>
+              <li class="py-3">
+                <a class="nav-link scrollto" routerLink="/contactenos" routerLinkActive="active">Contactenos</a>
+              </li>
+            </ul>
+          </div>
         </div>
       </div>
-    </nav><!-- .navbar -->
+    </nav>
+    <!-- .navbar -->
   </div>
-</header><!-- End Header -->
+</header>
 
+<main>
+<section id="contact">
+  <div class="continer img_novedades">
+    <div class="col-12">
+      <div class="title text-center" style="padding-top: 46px">
+        <p class="section-description" style="
+    text-transform: uppercase;
+    text-align: center;
+    padding-bottom: 0px;
+    font-size: 28px;
+    font-family: -webkit-body;
+    font-weight: 700;
+    padding-top: 20px;
+    margin-top: 80px;
+    color: white;
+    text-shadow: 6px 0px 5px black;
+          ">
+Contactenos        </p>
+      </div>
+    </div>
+  </div>
+
+  <div class="conatiner" style="
+    padding: 15px 15px 15px 15px;
+">
+      <!-- Uncomment below if you wan to use dynamic maps -->
+      <iframe
+        src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d14489.500278227917!2d-65.407234!3d-24.7826072!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x4cb6db77eeb01ed7!2sESTUDIO+SARAVIA+FRIAS+%26+CORNEJO!5e0!3m2!1ses-419!2sar!4v1547498795928"
+        width="100%" height="380" frameborder="0" style="border: 0" allowfullscreen></iframe>
+      </div>
+      <div class="container mt-5">
+        <div class="row justify-content-center">
+          <div class="col-lg-3 col-md-4">
+            <div class="info">
+              <div>
+                <i class="bi bi-geo-alt"></i>
+                <p>
+                  Rivadavia 378 <br />
+                  CP4400 - Salta, Argentina
+                </p>
+              </div>
+
+              <div>
+                <i class="bi bi-envelope"></i>
+                <p>info@sfcabogados.com.ar</p>
+              </div>
+
+              <div>
+                <i class="bi bi-phone"></i>
+                <p>(+54 0387) 4329023</p>
+              </div>
+            </div>
+
+            <!-- <div class="social-links">
+          <a href="#" class="twitter"><i class="bi bi-twitter"></i></a>
+          <a href="#" class="facebook"><i class="bi bi-facebook"></i></a>
+          <a href="#" class="instagram"><i class="bi bi-instagram"></i></a>
+          <a href="#" class="linkedin"><i class="bi bi-linkedin"></i></a>
+        </div> -->
+          </div>
+
+          <div class="col-lg-5 col-md-8">
+            <div class="form">
+              <form action="forms/contact.php" method="post" role="form" class="php-email-form">
+                <div class="form-group">
+                  <input type="text" name="name" class="form-control" id="name" placeholder="Nombre" required />
+                </div>
+                <div class="form-group mt-3">
+                  <input type="email" class="form-control" name="email" id="email" placeholder="Email" required />
+                </div>
+                <div class="form-group mt-3">
+                  <input type="text" class="form-control" name="subject" id="subject" placeholder="Asunto" required />
+                </div>
+                <div class="form-group mt-3">
+                  <textarea class="form-control" name="message" rows="5" placeholder="Mensaje" required></textarea>
+                </div>
+                <div class="my-3">
+                  <div class="loading">Loading</div>
+                  <div class="error-message"></div>
+                  <div class="sent-message">
+                    Su mensaje ha sido enviado. Gracias
+                  </div>
+                </div>
+                <div class="text-center">
+                  <button type="submit">Enviar Mensaje</button>
+                </div>
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+
+</section>
+</main>
 
 
 <app-footer></app-footer>

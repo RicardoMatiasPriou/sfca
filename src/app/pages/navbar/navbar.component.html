@@ -1,4 +1,4 @@
-<header id="header" style="background-color: #474d52;" class="fixed-top d-flex align-items-center header-transparent" (scroll)="onscroll()"
+<header id="header" class="fixed-top d-flex align-items-center header-transparent dd" (scroll)="onscroll()"
   [ngClass]="navbarfixed ? 'header-scrolled' : ''">
   <div class="container d-flex justify-content-between align-items-center">
     <div id="logo">
@@ -8,25 +8,25 @@
     <nav id="navbar" class="navbar">
       <ul>
         <li>
-          <a class="nav-link scrollto" [routerLink]="['/home']" routerLinkActive="active">Inicio</a>
+          <a class="nav-link scrollto" [routerLink]="['/']" routerLinkActive="active">Inicio</a>
         </li>
         <li class="dropdown">
-          <a [routerLink]="['/servicios/Mineria']" routerLinkActive="active"><span>Servicios</span> <i
+          <a [routerLink]="['/servicios']" routerLinkActive="active"><span>Servicios</span> <i
               class="bi bi-chevron-down"></i></a>
           <ul>
             <li>
-              <a [routerLink]="['/servicios/Mineria']" >Mineria</a>
+              <a [routerLink]="['/servicios/Mineria']" routerLinkActive="active">Mineria</a>
             </li>
 
             <li>
-              <a [routerLink]="['/servicios/Hidrocarburos']" >Hidrocarburos</a>
+              <a [routerLink]="['/servicios/Hidrocarburos']" routerLinkActive="active">Hidrocarburos</a>
             </li>
             <li>
-              <a [routerLink]="['/servicios/Medioambiente']" >Medioambiente – Recursos
+              <a [routerLink]="['/servicios/Medioambiente']" routerLinkActive="active">Medioambiente – Recursos
                 Hídricos</a>
             </li>
             <li>
-              <a [routerLink]="['/servicios/Corporativo']" >Corporativo</a>
+              <a [routerLink]="['/servicios/Corporativo']" routerLinkActive="active">Corporativo</a>
             </li>
           </ul>
         </li>
@@ -39,7 +39,7 @@
             <li><a routerLink="/equipo/Lucas">Lucas Cornejo Fossati</a></li>
             <li><a routerLink="/equipo/Consuelo">Consuelo Saravia Frias</a></li>
             <li><a routerLink="/equipo/Diego">Diego Juncosa Cornejo</a></li>
-            <li><a routerLink="/equipo/Elisea">Elisea Agolio</a></li>
+            <li><a routerLink="/equipo/Sofia">Sofia Paz Figueroa</a></li>
           </ul>
         </li>
         <li>
@@ -69,20 +69,20 @@
                 <a class="nav-link scrollto" [routerLink]="['/']" routerLinkActive="active">Inicio</a>
               </li>
               <li class="dropdown py-3">
-                <a  routerLinkActive="active"><span>Servicios</span> <i class="bi bi-chevron-down"></i></a>
+                <a href="#" routerLinkActive="active"><span>Servicios</span> <i class="bi bi-chevron-down"></i></a>
                 <ul>
                   <li>
-                    <a [routerLink]="['/servicios/Mineria']" data-bs-dismiss="offcanvas" aria-label="Close" >Mineria</a>
+                    <a [routerLink]="['/servicios/Mineria']" routerLinkActive="active">Mineria</a>
                   </li>
                   <li>
-                    <a [routerLink]="['/servicios/Hidrocarburos']"  data-bs-dismiss="offcanvas" aria-label="Close">Hidrocarburos</a>
+                    <a [routerLink]="['/servicios/Hidrocarburos']" routerLinkActive="active">Hidrocarburos</a>
                   </li>
                   <li>
-                    <a [routerLink]="['/servicios/Medioambiente']" data-bs-dismiss="offcanvas" aria-label="Close" >Medioambiente – Recursos
+                    <a [routerLink]="['/servicios/Medioambiente']" routerLinkActive="active">Medioambiente – Recursos
                       Hídricos</a>
                   </li>
                   <li>
-                    <a [routerLink]="['/servicios/Corporativo']" data-bs-dismiss="offcanvas" aria-label="Close" >Corporativo</a>
+                    <a [routerLink]="['/servicios/Corporativo']" routerLinkActive="active">Corporativo</a>
                   </li>
                 </ul>
               </li>
@@ -124,51 +124,3 @@
     <!-- .navbar -->
   </div>
 </header>
-<!-- <section id="servicios">
-  <div class="container_servicios" style="margin-top: 90px;">
-    <div class="row">
-      <div class="col-lg-6">
-        <div class="container img-detalle">
-        <img src="https://res.cloudinary.com/ricardo3874/image/upload/q_84/v1658979984/Abogados%20sfc/21_h0gclu.jpg" class="img-fluid" alt="" srcset="">
-      </div>
-      </div>
-      <div class="col-lg-6">
-        <div class="container">
-          <h1 class="text-center">Servicios</h1>
-          <ul>
-            <li>Lorem ipsum dolor sit amet consectetur adipisicing elit. Alias dicta ipsum debitis dolor obcaecati laudantium fugit. Veritatis, laboriosam consequuntur. Nobis illum enim esse unde explicabo. Tempore, ducimus quo! Ut, eaque.</li>
-            <li>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Doloremque, id quae. Odio explicabo debitis iusto corrupti reiciendis incidunt officiis harum, cupiditate quisquam vero eos consequatur blanditiis voluptatibus quo omnis doloremque?</li>
-          </ul>
-        </div>
-      </div>
-    </div>
-  </div>
-</section> -->
-<main id="main">
-  <!-- ======= About Section ======= -->
-  <section id="about" style="padding:115px 0;">
-    <div class="container" data-aos="fade-up">
-      <div class="row about-container">
-        <div style="padding-left: 30px;" class="col-lg-7 content order-lg-2 order-2" >
-          <h2 class="title">{{data.titulo}}</h2>
-          <p style="font-weight: 500;
-          line-height: 25px;
-          font-size: 21px;">
-            {{data.description}}
-          </p>
-          <div *ngFor="let e of data.items">
-          <div class="icon-box" data-aos="fade-up" data-aos-delay="50">
-            <p class="description">
-              {{e}}
-            </p>
-          </div>
-        </div>
-      </div>
-
-        <div class="col-lg-5 background order-lg-1 order-1 img-cover" data-aos="fade-left" data-aos-delay="100" style="background: url({{data.img}}) center no-repeat;"></div>
-      </div>
-    </div>
-  </section>
-</main>
-
-<app-footer></app-footer>

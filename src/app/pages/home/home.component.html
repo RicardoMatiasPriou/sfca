@@ -15,18 +15,18 @@
               class="bi bi-chevron-down"></i></a>
           <ul>
             <li>
-              <a [routerLink]="['/servicios/:Mineria']" routerLinkActive="active">Mineria</a>
+              <a [routerLink]="['/servicios/Mineria']" routerLinkActive="active">Mineria</a>
             </li>
 
             <li>
-              <a [routerLink]="['/servicios/:Hidrocarburos']" routerLinkActive="active">Hidrocarburos</a>
+              <a [routerLink]="['/servicios/Hidrocarburos']" routerLinkActive="active">Hidrocarburos</a>
             </li>
             <li>
-              <a [routerLink]="['/servicios/:Medioambiente']" routerLinkActive="active">Medioambiente – Recursos
+              <a [routerLink]="['/servicios/Medioambiente']" routerLinkActive="active">Medioambiente – Recursos
                 Hídricos</a>
             </li>
             <li>
-              <a [routerLink]="['/servicios/:Corporativo']" routerLinkActive="active">Corporativo</a>
+              <a [routerLink]="['/servicios/Corporativo']" routerLinkActive="active">Corporativo</a>
             </li>
           </ul>
         </li>
@@ -39,7 +39,7 @@
             <li><a routerLink="/equipo/Lucas">Lucas Cornejo Fossati</a></li>
             <li><a routerLink="/equipo/Consuelo">Consuelo Saravia Frias</a></li>
             <li><a routerLink="/equipo/Diego">Diego Juncosa Cornejo</a></li>
-            <li><a routerLink="/equipo/Sofia">Sofia Paz Figueroa</a></li>
+            <li><a routerLink="/equipo/Elisea">Elisea Agolio</a></li>
           </ul>
         </li>
         <li>
@@ -104,7 +104,7 @@
                   <li>
                     <a routerLink="/equipo/Diego">Diego Juncosa Cornejo</a>
                   </li>
-                  <li><a routerLink="/equipo/Sofia">Sofia Paz Figueroa</a></li>
+                  <li><a routerLink="/equipo/Elisea">Elisea Agolio</a></li>
                 </ul>
               </li>
               <li class="py-3">
@@ -127,15 +127,16 @@
 <!-- End Header -->
 
 <!-- ======= Hero Section ======= -->
-<section id="hero">
-  <div class="hero-container container-sm timenw" style="font-family: 'Times New Roman', Times, serif"
+<section id="hero" style="filter: brightness(1.7)!important ;">
+  <div class="hero-container container-sm timenw" style="font-family: 'Times New Roman', Times, serif ; MARGIN-TOP: 134px"
     data-aos="zoom-in" data-aos-delay="100">
     <h1 class="py-3 PEPE">Saravia Frias & Cornejo</h1>
     <h2 class="text-white PEPE" style="
         color: #eee;
         margin-bottom: 50px;
         font-size: 34px;
-        font-weight: 500;
+        font-weight: 400;
+        TEXT-TRANSFORM: uppercase;
       ">
       Abogados
     </h2>
@@ -154,12 +155,12 @@
             <h3 class="section-title">Sobre nosotros</h3>
             <p class="section-description" style="
                 color: black;
-                text-transform: uppercase;
                 text-align: center;
                 padding-bottom: 0px;
                 font-size: larger;
                 font-family: -webkit-body;
                 font-weight: 500;
+                font-family: 'Times New Roman', Times, serif;
               ">
               Somos uno de los principales estudios de abogados de Argentina,
               con sede en la ciudad de Salta, especializados en recursos
@@ -169,7 +170,7 @@
           </div>
         </div>
         <div class="col collapse1" style="align-self: center">
-          <img src="https://res.cloudinary.com/ricardo3874/image/upload/v1658979620/Abogados%20sfc/DSC02578_eb6blt.jpg"
+          <img src="https://res.cloudinary.com/ricardo3874/image/upload/v1659626834/Abogados%20sfc/DSC025781_fcrres.jpg"
             alt="" srcset="" class="img-fluid" />
         </div>
       </div>
@@ -192,8 +193,7 @@
                 padding-top: 20px;
                 margin-top: 44px;
               ">
-              Articulos redactados por nuestro equipo
-            </p>
+Saravia Frías & Cornejo en los medios            </p>
           </div>
         </div>
         <!-- /section title -->
@@ -210,7 +210,7 @@
                 <a>Natural Resources Law Firm of the Year – South America</a>
               </h3>
               <p>Revista “The New World Report” | Junio 2021</p>
-              <a class="btn btn-outline-secondary" routerLink="novedades">Leer mas</a>
+              <a class="btn btn-outline-secondary" routerLink="/novedades">Leer mas</a>
             </div>
           </div>
         </article>
@@ -227,7 +227,7 @@
             <div class="content">
               <h3><a>DESDE EL NORTE</a></h3>
               <p>A Uno Abogados | Febrero 2019</p>
-              <a class="btn btn-outline-secondary" routerLink="novedades">Leer mas</a>
+              <a class="btn btn-outline-secondary" routerLink="/novedades">Leer mas</a>
             </div>
           </div>
         </article>
@@ -248,7 +248,7 @@
                 </a>
               </h3>
               <p>FINANCE MONTHLY | Octubre 2018</p>
-              <a class="btn btn-outline-secondary" routerLink="novedades">Leer mas</a>
+              <a class="btn btn-outline-secondary" routerLink="/novedades">Leer mas</a>
             </div>
           </div>
         </article>
@@ -258,7 +258,25 @@
     </div>
     <!-- end container -->
   </section>
-
+  <section id="call-to-action">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-5 col-md-5" style="align-self: center">
+          <img src="https://res.cloudinary.com/ricardo3874/image/upload/v1659491655/Abogados%20sfc/DSC_8765-min_zddzkb.jpg"
+          alt="" srcset="" class="img-fluid" />
+        </div>
+        <div class="col-lg-7 col-md-7" style="align-self: center">
+          <div class="section-header">
+            <h3 class="section-title" style="color: white;
+            font-size: 32px;
+            text-transform: inherit;
+            font-weight: 500;">Marco Normativo Minero NOA  Argentino</h3>
+                <a class="cta-btn " href="https://mineriasustentable.com.ar/contenido/1066/se-presento-en-ucasal-el-libro-marco-normativo-minero-noa-argentino">Mas Informacion</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
   <!-- <section id="about">
     <div class="container" data-aos="fade-up">
       <div class="row about-container container" >
@@ -373,18 +391,7 @@
   <!-- End Services Section -->
 
   <!-- ======= Call To Action Section ======= -->
-  <section id="call-to-action">
-    <div class="container">
-      <div class="row" data-aos="zoom-in">
-        <div class="col-lg-9 text-center text-lg-start" style="text-align-last: center; text-transform: uppercase">
-          <h3 class="cta-title">Saravia Frias Cornejo en los Medios</h3>
-        </div>
-        <div class="col-lg-3 cta-btn-container text-center">
-          <a class="cta-btn" routerLink="novedades">Novedades</a>
-        </div>
-      </div>
-    </div>
-  </section>
+
   <!-- End Call To Action Section -->
 
   <!-- ======= Portfolio Section ======= -->
@@ -517,109 +524,92 @@
         </p>
       </div>
       <div class="row">
-        <div class="col-lg-4 col-md-4" routerLink="/equipo/Agustín">
+        <div class="col-lg-4 col-md-4" >
           <div class="member" data-aos="fade-up" data-aos-delay="100">
-            <div class="pic">
+            <div class="pic"routerLink="/equipo/Santiago">
               <img
                 src="https://res.cloudinary.com/ricardo3874/image/upload/v1658979596/Abogados%20sfc/DSC02503_z96c7g.jpg"
                 alt="" />
             </div>
-            <h4>Santiago Saravia Frias</h4>
-            <span>Socio de Saravia Frías | Cornejo Abogados</span>
+            <h4 routerLink="/equipo/Santiago">Santiago Saravia Frias</h4>
+            <span routerLink="/equipo/Agustín">Socio</span>
             <div class="social">
-              <a><i class="bi bi-twitter"></i></a>
-              <a><i class="bi bi-facebook"></i></a>
-              <a><i class="bi bi-instagram"></i></a>
-              <a><i class="bi bi-linkedin"></i></a>
+              <a href="https://www.linkedin.com/in/santiago-saravia-frias-7953702a/?originalSubdomain=ar"><i class="bi bi-linkedin"></i></a>
             </div>
           </div>
         </div>
 
-        <div class="col-lg-4 col-md-4" routerLink="/equipo/Agustín">
+        <div class="col-lg-4 col-md-4" >
           <div class="member" data-aos="fade-up" data-aos-delay="200">
-            <div class="pic">
+            <div class="pic" routerLink="/equipo/Agustín">
               <img
-                src="https://res.cloudinary.com/ricardo3874/image/upload/v1658979594/Abogados%20sfc/DSC02495_kolf0l.jpg"
+                src="https://res.cloudinary.com/ricardo3874/image/upload/v1659455823/Abogados%20sfc/DSC02497_fuah3p.jpg"
                 alt="" />
             </div>
-            <h4>Agustín Saravia Frías</h4>
-            <span>Socio de Saravia Frías | Cornejo Abogados</span>
+            <h4 routerLink="/equipo/Agustín">Agustín Saravia Frías</h4>
+            <span routerLink="/equipo/Agustín">Socio</span>
             <div class="social">
-              <a><i class="bi bi-twitter"></i></a>
-              <a><i class="bi bi-facebook"></i></a>
-              <a><i class="bi bi-instagram"></i></a>
+              <a href="https://www.linkedin.com/in/agust%C3%ADn-saravia-fr%C3%ADas-54644050/?original_referer=https%3A%2F%2Fwww%2Egoogle%2Ecom%2F&originalSubdomain=ar"><i class="bi bi-linkedin"></i></a>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-lg-4 col-md-4" >
+          <div class="member" data-aos="fade-up" data-aos-delay="300">
+            <div class="pic" routerLink="/equipo/Lucas">
+              <img src="https://res.cloudinary.com/ricardo3874/image/upload/v1658979589/Abogados%20sfc/DSC02521_i0tewx.jpg" alt="" />
+            </div>
+            <h4 routerLink="/equipo/Lucas">Lucas Cornejo Fossati</h4>
+            <span routerLink="/equipo/Lucas">Socio</span>
+            <div class="social">
               <a><i class="bi bi-linkedin"></i></a>
             </div>
           </div>
         </div>
 
-        <!-- <div class="col-lg-4 col-md-4" routerLink="/equipo/Lucas">
-          <div class="member" data-aos="fade-up" data-aos-delay="300">
-            <div class="pic">
-              <img src="assets/img/LUCAS-CORNEJO-FOSSATI.jpg" alt="" />
-            </div>
-            <h4>Lucas Cornejo Fossati</h4>
-            <span>Socio de Saravia Frías | Cornejo Abogados</span>
-            <div class="social">
-              <a><i class="bi bi-twitter"></i></a>
-              <a><i class="bi bi-facebook"></i></a>
-              <a><i class="bi bi-instagram"></i></a>
-              <a><i class="bi bi-linkedin"></i></a>
-            </div>
-          </div>
-        </div> -->
-
-        <div class="col-lg-4 col-md-4" routerLink="/equipo/Consuelo">
+        <div class="col-lg-4 col-md-4" >
           <div class="member" data-aos="fade-up" data-aos-delay="400">
-            <div class="pic">
+            <div class="pic"routerLink="/equipo/Consuelo">
               <img
                 src="https://res.cloudinary.com/ricardo3874/image/upload/v1658979622/Abogados%20sfc/DSC02475_ptbuea.jpg"
                 alt="" />
             </div>
-            <h4>Consuelo Saravia Frias</h4>
-            <span>Asociada a Saravia Frías | Cornejo Abogados</span>
+            <h4 routerLink="/equipo/Consuelo" >Consuelo Saravia Frias</h4>
+            <span routerLink="/equipo/Consuelo">Asociada</span>
             <div class="social">
-              <a><i class="bi bi-twitter"></i></a>
-              <a><i class="bi bi-facebook"></i></a>
-              <a><i class="bi bi-instagram"></i></a>
-              <a><i class="bi bi-linkedin"></i></a>
+              <a href="https://www.linkedin.com/in/consuelo-saravia-fr%C3%ADas-93a7b113/?originalSubdomain=ar"><i class="bi bi-linkedin"></i></a>
             </div>
           </div>
         </div>
 
-        <div class="col-lg-4 col-md-4" routerLink="/equipo/Diego">
+        <div class="col-lg-4 col-md-4" >
           <div class="member" data-aos="fade-up" data-aos-delay="500">
-            <div class="pic">
+            <div class="pic" routerLink="/equipo/Diego">
               <img
                 src="https://res.cloudinary.com/ricardo3874/image/upload/v1658979582/Abogados%20sfc/DSC02514_jbj4om.jpg"
                 alt="" />
             </div>
-            <h4>Diego Juncosa Cornejo</h4>
-            <span>Asociado a Saravia Frías | Cornejo Abogados</span>
+            <h4 routerLink="/equipo/Diego">Diego Juncosa Cornejo</h4>
+            <span routerLink="/equipo/Diego">Asociado</span>
             <div class="social">
-              <a><i class="bi bi-twitter"></i></a>
-              <a><i class="bi bi-facebook"></i></a>
-              <a><i class="bi bi-instagram"></i></a>
+              <a href="https://www.linkedin.com/in/diego-juncosa-cornejo-30369311b/?original_referer=https%3A%2F%2Fwww%2Egoogle%2Ecom%2F&originalSubdomain=ar"><i class="bi bi-linkedin"></i></a>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-4 col-md-4" >
+          <div class="member" data-aos="fade-up" data-aos-delay="600">
+            <div class="pic" routerLink="/equipo/Elisea">
+              <img
+                src="https://res.cloudinary.com/ricardo3874/image/upload/v1658979616/Abogados%20sfc/DSC02485_ttxqk2.jpg"
+                alt="" />
+            </div>
+            <h4 routerLink="/equipo/Elisea">Elisea Agolio</h4>
+            <span routerLink="/equipo/Elisea">Paralegal</span>
+            <div class="social">
               <a><i class="bi bi-linkedin"></i></a>
             </div>
           </div>
         </div>
-
-        <!-- <div class="col-lg-4 col-md-4" routerLink="/equipo/Sofia">
-          <div class="member" data-aos="fade-up" data-aos-delay="600">
-            <div class="pic">
-              <img src="assets/img/Sofia-Paz-Figueroa.jpg" alt="" />
-            </div>
-            <h4>Sofia Paz Figueroa</h4>
-            <span>Asociada a Saravia Frías | Cornejo Abogados</span>
-            <div class="social">
-              <a><i class="bi bi-twitter"></i></a>
-              <a><i class="bi bi-facebook"></i></a>
-              <a><i class="bi bi-instagram"></i></a>
-              <a><i class="bi bi-linkedin"></i></a>
-            </div>
-          </div>
-        </div> -->
       </div>
     </div>
   </section>
@@ -660,6 +650,10 @@
               <i class="bi bi-phone"></i>
               <p>(+54 0387) 4329023</p>
             </div>
+            <div>
+              <i class="bi bi-linkedin"></i>
+              <p><a href="https://www.linkedin.com/company/saravia-fr%C3%ADas-cornejo-abogados/?originalSubdomain=ar">www.linkedin.com</a></p>
+            </div>
           </div>
 
           <!-- <div class="social-links">
@@ -674,16 +668,16 @@
           <div class="form">
             <form action="forms/contact.php" method="post" role="form" class="php-email-form">
               <div class="form-group">
-                <input type="text" name="name" class="form-control" id="name" placeholder="Your Name" required />
+                <input type="text" name="name" class="form-control" id="name" placeholder="Nombre" required />
               </div>
               <div class="form-group mt-3">
-                <input type="email" class="form-control" name="email" id="email" placeholder="Your Email" required />
+                <input type="email" class="form-control" name="email" id="email" placeholder="Email" required />
               </div>
               <div class="form-group mt-3">
-                <input type="text" class="form-control" name="subject" id="subject" placeholder="Subject" required />
+                <input type="text" class="form-control" name="subject" id="subject" placeholder="Asunto" required />
               </div>
               <div class="form-group mt-3">
-                <textarea class="form-control" name="message" rows="5" placeholder="Message" required></textarea>
+                <textarea class="form-control" name="message" rows="5" placeholder="Mensaje" required></textarea>
               </div>
               <div class="my-3">
                 <div class="loading">Loading</div>

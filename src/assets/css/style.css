@@ -8,6 +8,7 @@
 /*--------------------------------------------------------------
 # General
 --------------------------------------------------------------*/
+
 body {
   background: #fff;
   color: #666666;
@@ -87,7 +88,7 @@ h1, h2, h3, h4, h5, h6 {
   font-size: 32px;
   margin: 0;
   line-height: 1;
-  font-family: "Poppins", sans-serif;
+  font-family: 'Times New Roman', Times, serif;
   font-weight: 700;
   letter-spacing: 3px;
   text-transform: uppercase;
@@ -139,7 +140,7 @@ h1, h2, h3, h4, h5, h6 {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  font-family: "Poppins", sans-serif;
+  font-family: 'Times New Roman', Times, serif;
   color: #fff;
   font-size: 14px;
   padding: 0 4px;
@@ -387,7 +388,7 @@ h1, h2, h3, h4, h5, h6 {
   }
 }
 #hero .btn-get-started {
-  font-family: "Poppins", sans-serif;
+  font-family: 'Times New Roman', Times, serif;
   text-transform: uppercase;
   font-weight: 500;
   font-size: 16px;
@@ -411,6 +412,7 @@ h1, h2, h3, h4, h5, h6 {
     background: url(https://res.cloudinary.com/ricardo3874/image/upload/v1658979627/Abogados%20sfc/DSC02583_ygybss.jpg) top center;
     background-size: cover;
     position: relative;
+    filter: brightness(1.2);
   }
   .img-preio{
     width: 390px;
@@ -505,7 +507,7 @@ section {
 #about .about-container .title {
   color: #333;
   font-weight: 700;
-  font-size: 32px;
+  font-size: 40px;
 }
 @media (max-width: 768px) {
   #about .about-container .title {
@@ -552,9 +554,9 @@ section {
   color: #111;
 }
 #about .about-container .icon-box .description {
-  margin-left: 80px;
-  line-height: 24px;
-  font-size: 14px;
+  line-height: 36px;
+  font-size: 23px;
+  word-spacing: 11px
 }
 
 /* Facts Section
@@ -571,7 +573,7 @@ section {
 #facts .counters p {
   padding: 0;
   margin: 0 0 20px 0;
-  font-family: "Poppins", sans-serif;
+  font-family: 'Times New Roman', Times, serif;
   font-size: 14px;
 }
 
@@ -631,7 +633,7 @@ section {
   font-size: 18px;
   margin-bottom: 15px;
   text-transform: uppercase;
-  font-family: Georgia, 'Times New Roman', Times, serif;
+  font-family: 'Times New Roman', Times, serif;
 }
 #services .title a {
   color: #111;
@@ -646,12 +648,10 @@ section {
 #call-to-action {
   background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url(https://res.cloudinary.com/ricardo3874/image/upload/v1658982276/2_resize_resize_klet0l.jpg) fixed center center;
   background-size: cover;
-  padding: 80px 0;
+  padding: 39px 0;
 }
 @media (max-width: 1024px) {
-  #call-to-action {
-    background-attachment: scroll;
-  }
+
 }
 #call-to-action .cta-title {
   color: #fff;
@@ -672,18 +672,21 @@ section {
 
 
 #call-to-action .cta-btn {
-  font-family: "Poppins", sans-serif;
+  font-family: 'Times New Roman', Times, serif;
   text-transform: uppercase;
   font-weight: 500;
   font-size: 16px;
   letter-spacing: 1px;
-  display: inline-block;
+  display: flex;
   padding: 8px 30px;
   border-radius: 50px;
   transition: 0.5s;
-  margin: 10px;
+  margin: 18px;
   border: 2px solid #fff;
   color: #fff;
+  align-items: center;
+  flex-wrap: nowrap;
+  justify-content: center;
 }
 #call-to-action .cta-btn:hover {
   background: #474d52;
@@ -842,7 +845,21 @@ section {
 #team .member .pic {
   margin-bottom: 15px;
   overflow: hidden;
-  height: 260px;
+  height: 150px;
+}
+@media (min-width: 990px) {
+  #team .member .pic {
+    margin-bottom: 15px;
+    overflow: hidden;
+    height: 220px;
+  }
+}
+@media (max-width: 767px) {
+  #team .member .pic {
+    margin-bottom: 15px;
+    overflow: hidden;
+    height: 220px;
+  }
 }
 #team .member .pic img {
   max-width: 100%;
